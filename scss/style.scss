@@ -1,0 +1,744 @@
+$font-second: 'Marck Script';
+$color-red: #fb5231;
+$font-menu: 'Montserrat';
+
+@mixin img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+* {
+    font-family: 'Yeseva One';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.container__title {
+    font-family: $font-second;
+    font-size: 2.3rem;
+    text-align: center;
+}
+
+.container__par {
+    text-align: center;
+    padding: 10px;
+}
+
+.divider--red {
+    width: 250px;
+    height: 24px;
+    background: url('../img/Divider-red.png');
+    display: block;
+    margin: 0 auto;
+}
+
+#home {
+    color: #fff;
+    background: url('../img/header.jpg');
+    background-color: rgba(0, 0, 0, 0.44);
+    background-size: cover;
+    height: 700px;
+
+    .logo {
+        height: 100px;
+        width: 200px;
+    }
+
+    .navbar__burger {
+        display: none;
+    }
+
+    .home__nav {
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-around;
+
+
+        .nav {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            height: 100px;
+            line-height: 24px;
+
+            .nav__item {
+                padding: 10px;
+            }
+
+            .nav__item:hover {
+                color: #fb5231;
+            }
+        }
+
+        .links {
+            line-height: 100px;
+
+            .fab {
+                padding: 0 5px;
+            }
+        }
+    }
+
+    .home__container {
+        flex-direction: column;
+        padding-top: 100px;
+        align-items: center;
+
+        .home__title {
+            font-size: 5.5rem;
+            text-shadow: 1px 1px 2px rgba(1, 1, 1, 0.64);
+            opacity: 0.9;
+            padding: 0 5px;
+        }
+
+        .home__divider {
+            background: url('../img/hr.png');
+            height: 43px;
+            width: 230px;
+            margin: 20px;
+            display: block;
+        }
+
+        .home__button {
+            width: 228px;
+            height: 57px;
+            color: white;
+        }
+
+        .home__button--red {
+            background: url('../img/buttonred.png');
+            border-style: none;
+            margin-right: 15px;
+        }
+
+        .home__button--transparent {
+            background: url('../img/buttonwhite.png')
+        }
+
+    }
+}
+
+.about {
+    height: 710px;
+    background-size: cover;
+    background-image: url('../img/aboutbg.png');
+    position: relative;
+
+    .about--background {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: linear-gradient(-43deg, rgba(1, 1, 1, 0.09) 0%, rgba(255, 255, 255, 0.09) 100%);
+        width: 100%;
+        height: 710px;
+        z-index: -1;
+        display: block;
+    }
+
+    .about__container {
+        height: 660px;
+        padding-top: 50px;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .about__title {
+            color: $color-red;
+            font-size: 3rem;
+        }
+
+        .about__par {
+            max-width: 500px;
+            font-size: 1.3rem;
+        }
+
+        .about__img {
+            height: 253px;
+            width: 249px;
+            margin-left: 100px;
+        }
+    }
+}
+
+
+#ingredients {
+    .ingredients__container {
+        height: 750px;
+        color: #ffffff;
+
+        .ingredients__container--sushi {
+            flex-basis: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .sushi__image {
+                @include img-fluid;
+            }
+        }
+
+        .ingredients__container--fine {
+            display: flex;
+            flex-basis: 50%;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+            padding: 12% 0;
+            background: url('../img/redbg.png');
+            background-size: cover;
+
+            .fine__divider {
+                width: 247px;
+                height: 24px;
+                background: url('../img/finedivider.png');
+                display: block;
+                margin: 0 auto;
+            }
+
+            .fine__par {
+                width: 70%;
+            }
+
+        }
+    }
+}
+
+#menu {
+    height: 1000px;
+    background-color: #1a1f3b;
+    color: #ffffff;
+
+    .menu__container {
+        padding-top: 50px;
+
+        .menu__container--single {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-basis: 50%;
+            position: relative;
+            height: 900px;
+
+            .menu__image--fish {
+                position: absolute;
+                top: 40%;
+                left: 0;
+            }
+
+            .menu__image--meat {
+                position: absolute;
+                top: 30%;
+                right: 0;
+            }
+
+            .menu__title {
+                padding-top: 35px;
+                padding-bottom: 15px;
+            }
+
+            .menu__dishes {
+                padding-top: 15px;
+                padding-bottom: 15px;
+                border-bottom: 1px solid #586b89;
+                width: 70%;
+
+                .menu__dishes--title {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-top: 15px;
+                }
+
+                .menu__dishes--description {
+                    font-size: 0.8rem;
+                    font-family: $font-menu;
+                    font-weight: 200;
+                    padding-top: 5px;
+                }
+            }
+        }
+    }
+
+}
+
+#reviews {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .reviews__container {
+        height: 75%;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-items: center;
+
+        .reviews__par {
+            width: 55%;
+        }
+    }
+}
+
+#reservations {
+    height: 700px;
+    position: relative;
+    background-image: url('../img/resbg.jpg');
+    align-items: center;
+    background-size: cover;
+
+    .reservation__background {
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    .reservation__background--fork {
+        left: 2%;
+    }
+
+    .reservation__background--sushi {
+        right: 2%;
+    }
+
+    .reservation__container {
+        height: 100%;
+    }
+
+    .reservation__container--images {
+        flex-basis: 50%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
+        .food {
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .food__cake,
+        .food__pasta {
+            padding: 10px;
+            z-index: 2;
+            width: 50%;
+            height: 90%;
+        }
+    }
+
+    .reservation__container--booking-form {
+        flex-basis: 50%;
+        height: 74%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 2;
+
+        .reservation__title {
+            color: $color-red;
+        }
+
+        .reservation__par {
+            width: 55%;
+        }
+
+        .reservation__form {
+            padding-top: 60px;
+
+            .book-now {
+                float: left;
+                padding: 10px;
+            }
+
+            .book-now__label {
+                color: $color-red;
+            }
+
+            .book-now__input,
+            .book-now__select {
+                display: block;
+                width: 200px;
+                font-style: italic;
+                font-family: $font-menu;
+                height: 36px;
+                padding-left: 5px;
+                font-size: 0.9rem;
+                box-shadow: inset 0 0 50px rgba(1, 1, 1, 0.05);
+                border-radius: (0);
+                background: url('../img/resbutt.png');
+                -webkit-appearance: none;
+                color: #a9a4a4;
+            }
+
+        }
+
+        .reservation__button {
+            background-color: $color-red;
+            border-style: none;
+            width: 228px;
+            height: 57px;
+            margin-top: 40px;
+            color: #ffffff;
+        }
+    }
+}
+
+#footer {
+    height: 300px;
+    background: url('../img/footerbg.png');
+    color: #e3e6e6;
+
+    .footer__container {
+        justify-content: space-between;
+        align-content: center;
+        height: 100%;
+        padding: 20px;
+    }
+
+
+    .footer__phone {
+        text-align: center;
+    }
+
+    .footer__par,
+    .media__par {
+        font-size: 1.2rem;
+        color: #969595;
+        letter-spacing: 0.72px;
+        padding-top: 15px;
+        text-align: center;
+    }
+
+    .fab {
+        font-size: 1.6rem;
+        padding: 10px;
+        background-color: #1a1e36;
+        color: #969595;
+        cursor: pointer;
+        z-index: 21;
+        position: relative;
+        border-radius: 50%;
+    }
+
+    .fab:hover {
+        background: $color-red;
+        color: #ffffff;
+    }
+
+    .fas {
+        font-size: 1.6rem;
+        text-align: center;
+        display: block;
+    }
+
+    .footer__media {
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+
+        .media {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .media__par {
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+
+
+
+@media (max-width: 992px) {
+    #home {
+        .links {
+            display: none;
+        }
+    }
+
+    #menu {
+
+        .menu__image--fish,
+        .menu__image--meat {
+            @include img-fluid;
+        }
+    }
+
+    #reservations {
+        height: 500px;
+
+        .reservation__container--booking-form {
+            flex-basis: 100%;
+            margin: 0 auto;
+            height: 90%;
+        }
+
+        .reservation__container--images {
+            flex-basis: 0%;
+
+            .food__cake,
+            .food__pasta {
+                display: none;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+    #home {
+
+        .home__nav {
+            position: absolute;
+            width: 100%;
+
+
+            .nav {
+                display: none;
+                flex-direction: column;
+                margin-top: 60px;
+                position: fixed;
+                right: 40px;
+                top: 20px;
+                text-align: right;
+                height: 270px;
+                width: 150px;
+                z-index: 100;
+                border-radius: 7%;
+                background: rgba(0, 0, 0, 0.9)
+            }
+
+            .nav.open {
+                display: block;
+                clear: both;
+            }
+
+            .navbar__burger {
+                display: block;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                top: 40px;
+                right: 40px;
+                position: fixed;
+            }
+        }
+
+        .home__container {
+            padding-top: 180px;
+
+            .home__title {
+                font-size: 4rem;
+                text-align: center;
+
+            }
+        }
+
+        .home__buttons {
+            padding-top: 30px;
+        }
+
+    }
+
+    #about {
+        .about__container {
+            .about__par {
+                font-size: 1rem;
+            }
+        }
+
+    }
+
+    #ingredients {
+        .ingredients__container {
+            flex-direction: column;
+            height: 850px;
+
+            .ingredients__container--sushi {
+                flex-basis: 55%;
+            }
+
+            .ingredients__container--fine {
+                padding-top: 9%;
+                flex-basis: 45%;
+
+                .fine__par {
+                    font-size: 0.9rem;
+                }
+
+                .fine__title,
+                .fine__par {
+                    padding: 15px;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+@media (max-width: 576px) {
+    #home {
+        .home__nav {
+            justify-content: flex-start;
+        }
+
+        .logo {
+            width: 120px;
+            height: 80px;
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+
+        .navbar__burger {
+            top: 34px;
+
+        }
+
+        .home__container {
+            .home__title {
+                font-size: 3.5rem;
+                margin-top: -40px;
+            }
+
+            .home__buttons {
+                text-align: center;
+            }
+
+            .home__button {
+                height: 50px;
+                width: 190px;
+                margin: 5px;
+            }
+        }
+    }
+
+    #about {
+        .about__img {
+            width: 60%;
+            height: auto;
+        }
+    }
+
+    #ingredients {
+
+        .ingredients__container {
+
+            .ingredients__container--sushi {
+                flex-basis: 45%;
+            }
+
+            .ingredients__container--fine {
+                flex-basis: 55%;
+
+                .fine__images {
+                    display: flex;
+                    width: 80%;
+                    justify-content: center;
+
+                    .fine__image {
+                        width: 25%;
+                        height: 25%;
+                    }
+                }
+            }
+        }
+    }
+
+    #menu {
+        height: 1900px;
+
+        .menu__container {
+            flex-direction: column;
+
+            .menu__container--single {
+                .menu__dishes {
+                    width: 95%;
+                }
+            }
+
+
+        }
+    }
+
+    #reviews {
+        height: 550px;
+
+        .reviews__container {
+            width: 90%;
+            height: 90%;
+        }
+    }
+
+    #reservations {
+        height: 800px;
+
+        .reservation__background--fork {
+            left: 25%;
+        }
+
+        .reservation__background--sushi {
+            display: none;
+        }
+
+        .reservation__container--booking-form {
+
+
+            .reservation__form {
+                display: flex;
+                flex-direction: column;
+
+            }
+        }
+    }
+
+    #footer {
+        height: 450px;
+
+        .footer__container {
+            flex-direction: column;
+            justify-content: center;
+            justify-items: center;
+            align-content: center;
+            align-items: center;
+        }
+
+        .footer__phone,
+        .footer__media,
+        .footer__address {
+            padding-top: 20px;
+            padding-left: 0;
+        }
+    }
+}
