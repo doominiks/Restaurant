@@ -705,6 +705,7 @@ button:hover {
   #ingredients .ingredients__container .ingredients__container--fine .fine__images .fine__image {
     width: 25%;
     height: 80%;
+    padding: 2px;
   }
   #menu {
     height: 1900px;
