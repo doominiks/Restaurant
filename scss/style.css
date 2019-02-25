@@ -71,6 +71,7 @@ button:hover {
 
 #home .navbar__burger {
   display: none;
+  z-index: 100;
 }
 
 #home .home__nav {
